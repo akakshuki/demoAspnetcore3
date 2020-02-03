@@ -3,12 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eSolution.webApp", "eSolution.webApp\eSolution.webApp.csproj", "{01D7C5B1-4F25-4B9A-A2C0-4829BF86B276}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShopSolution.webApp", "eSolution.webApp\eShopSolution.webApp.csproj", "{01D7C5B1-4F25-4B9A-A2C0-4829BF86B276}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FD60C20-CEC1-45B1-9FE0-5036F061A027}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShopSolutionData", "eShopSolutionData\eShopSolutionData.csproj", "{93C6A5FD-6EA2-4F84-A663-F27FC64DA37E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShopSolution.Application", "eShopSolution.Application\eShopSolution.Application.csproj", "{E4BEC0E5-B9BD-489A-A67A-DB4DDD10F2B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +24,14 @@ Global
 		{01D7C5B1-4F25-4B9A-A2C0-4829BF86B276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01D7C5B1-4F25-4B9A-A2C0-4829BF86B276}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01D7C5B1-4F25-4B9A-A2C0-4829BF86B276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93C6A5FD-6EA2-4F84-A663-F27FC64DA37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C6A5FD-6EA2-4F84-A663-F27FC64DA37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C6A5FD-6EA2-4F84-A663-F27FC64DA37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C6A5FD-6EA2-4F84-A663-F27FC64DA37E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4BEC0E5-B9BD-489A-A67A-DB4DDD10F2B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4BEC0E5-B9BD-489A-A67A-DB4DDD10F2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4BEC0E5-B9BD-489A-A67A-DB4DDD10F2B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4BEC0E5-B9BD-489A-A67A-DB4DDD10F2B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
