@@ -1,5 +1,6 @@
 ﻿using eShopSolutionData.Configurations;
 using eShopSolutionData.Entities;
+using eShopSolutionData.Extendsions;
 using Microsoft.EntityFrameworkCore;
 
 namespace eShopSolutionData.EF
@@ -12,6 +13,7 @@ namespace eShopSolutionData.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //config using fluentApi
             modelBuilder.ApplyConfiguration(new CartConfiguration());
 
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
@@ -27,6 +29,9 @@ namespace eShopSolutionData.EF
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+
+            //data seeding
+          modelBuilder.Seed();
         }
 
         public DbSet<Product> Products { get; set; }
