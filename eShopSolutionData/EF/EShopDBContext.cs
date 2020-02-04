@@ -6,7 +6,7 @@ namespace eShopSolutionData.EF
 {
     public class EShopDBContext : DbContext
     {
-        private EShopDBContext(DbContextOptions options) : base(options)
+        public EShopDBContext(DbContextOptions options) : base(options)
         {
         }
 
