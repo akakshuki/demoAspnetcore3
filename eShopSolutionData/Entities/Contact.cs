@@ -5,12 +5,13 @@ using eShopSolutionData.Enums;
 
 namespace eShopSolutionData.Entities
 {
-    public class Category
+    public class Contact
     {
         public int Id { set; get; }
-        public int SortOrder { set; get; }
-        public bool IsShowOnHome { set; get; }
-        public int? ParentId { set; get; }
+        public string Name { set; get; }
+        public string Email { set; get; }
+        public string PhoneNumber { set; get; }
+        public string Message { set; get; }
         public Status Status { set; get; }
     }
 }
