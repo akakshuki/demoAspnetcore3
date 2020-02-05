@@ -1,11 +1,14 @@
-﻿using eShopSolutionData.Configurations;
+﻿using System;
+using eShopSolutionData.Configurations;
 using eShopSolutionData.Entities;
 using eShopSolutionData.Extendsions;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace eShopSolutionData.EF
 {
-    public class EShopDBContext : DbContext
+    public class EShopDBContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
         public EShopDBContext(DbContextOptions options) : base(options)
         {
@@ -29,9 +32,18 @@ namespace eShopSolutionData.EF
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+            modelBuilder.ApplyConfiguration(new AppUserConfiguration());
+            modelBuilder.ApplyConfiguration(new AppRoleConfiguration());
+
+            modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("AppUserClaims");
+            modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("AppUserRoles").HasKey(x=>new {x.RoleId, x.UserId}); 
+            modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("AppUserLogins").HasKey(x=>x.UserId);
+
+            modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("AppRoleClaims");
+            modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserTokens").HasKey(x=>x.UserId);
 
             //data seeding
-          modelBuilder.Seed();
+            modelBuilder.Seed();
         }
 
         public DbSet<Product> Products { get; set; }

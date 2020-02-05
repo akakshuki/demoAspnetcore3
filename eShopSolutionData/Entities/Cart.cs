@@ -17,5 +17,7 @@ namespace eShopSolutionData.Entities
 
         public DateTime DateCreated { get; set; }
 
+        public AppUser AppUser { get; set; }
+
     }
 }
